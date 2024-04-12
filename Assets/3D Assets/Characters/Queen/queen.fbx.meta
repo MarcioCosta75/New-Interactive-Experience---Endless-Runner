@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: de87042305aab3144a6e2bd658bcfa58
+guid: 9b1365baeb66c8c41b70a890d9e7928e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -16,8 +16,7 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
-      human bone 'Hips' not found\n"
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -78,78 +77,12 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - 9b1365baeb66c8c41b70a890d9e7928e
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton:
-    - name: queen(Clone)
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: body
-      parentName: queen(Clone)
-      position: {x: -10.143154, y: 1.5263504, z: -0.18719141}
-      rotation: {x: -0.70710677, y: 0, z: -0, w: 0.7071068}
-      scale: {x: 6.7083597, y: 6.7083597, z: 6.7083597}
-    - name: coat
-      parentName: queen(Clone)
-      position: {x: -10.143154, y: 1.5005931, z: -0.18719141}
-      rotation: {x: -0.70710677, y: 0, z: -0, w: 0.7071068}
-      scale: {x: 14.672579, y: 14.672579, z: 14.672579}
-    - name: left fur
-      parentName: queen(Clone)
-      position: {x: -10.661926, y: 1.2277343, z: -0.20703793}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 1.8219444, y: 1.8219444, z: 1.8219444}
-    - name: right fur
-      parentName: queen(Clone)
-      position: {x: -9.623773, y: 1.2317063, z: -0.2070451}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 1.8219444, y: 1.8219444, z: 1.8219444}
-    - name: upper fur
-      parentName: queen(Clone)
-      position: {x: -10.005652, y: 1.3515193, z: -0.2821057}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 1.8219444, y: 1.8219444, z: 1.8219444}
-    - name: upper lip
-      parentName: queen(Clone)
-      position: {x: -10.143357, y: 1.3751024, z: -0.08186551}
-      rotation: {x: -0.6136732, y: -0.0011412705, z: 0.0007883667, w: 0.7895589}
-      scale: {x: 16.62997, y: 16.629969, z: 16.629967}
-    - name: lower lip
-      parentName: queen(Clone)
-      position: {x: -10.1430855, y: 1.3655851, z: -0.080701455}
-      rotation: {x: -0.0022611246, y: 0.8479187, z: -0.53010815, w: 0.0037635388}
-      scale: {x: 16.629969, y: 16.629967, z: 16.629969}
-    - name: hat.001
-      parentName: queen(Clone)
-      position: {x: -10.131202, y: 1.5370268, z: -0.44553953}
-      rotation: {x: -0.5704526, y: -0.42037734, z: -0.4759602, w: 0.52089214}
-      scale: {x: 8.615729, y: 8.615728, z: 8.61573}
-    - name: nose
-      parentName: queen(Clone)
-      position: {x: -10.14366, y: 1.401096, z: -0.078368336}
-      rotation: {x: -0.6826605, y: 0, z: -0, w: 0.73073566}
-      scale: {x: 2.887712, y: 2.8877118, z: 2.8877118}
-    - name: left shoe
-      parentName: queen(Clone)
-      position: {x: -10.232333, y: 0.021049738, z: -0.17048842}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 4.302833, y: 6.2598457, z: 1.4950333}
-    - name: right shoe
-      parentName: queen(Clone)
-      position: {x: -10.053896, y: 0.021049738, z: -0.17048842}
-      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: -4.302833, y: -6.2598457, z: -1.4950333}
-    - name: hair
-      parentName: queen(Clone)
-      position: {x: -10.099388, y: 1.4309437, z: -0.10791148}
-      rotation: {x: -0.70652974, y: -0.014145537, z: 0.011952164, w: 0.70744103}
-      scale: {x: 2.4530709, y: 2.4530704, z: 2.4530704}
+    skeleton: []
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
