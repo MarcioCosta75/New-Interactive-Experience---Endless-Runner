@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - HighBarrier
   - GameFinal
+  - Switch
   layers:
   - Default
   - TransparentFX
