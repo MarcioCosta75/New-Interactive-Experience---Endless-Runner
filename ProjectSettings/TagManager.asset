@@ -9,6 +9,7 @@ TagManager:
   - HighBarrier
   - GameFinal
   - Switch
+  - JumpTrigger
   layers:
   - Default
   - TransparentFX

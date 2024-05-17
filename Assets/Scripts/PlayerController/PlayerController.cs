@@ -13,12 +13,16 @@ public class PlayerController : MonoBehaviour
     public GameObject endGamePanel;
     public BoxCollider playerCollider;
 
-    private int currentLane = 1;  // 0 = esquerda, 1 = meio, 2 = direita
+    public int currentLane = 1;  // 0 = esquerda, 1 = meio, 2 = direita
     private bool isSliding = false;
-    private float[] lanesXPositions = { -1.5f, 0.0f, 1.5f };
+    public float[] lanesXPositions = { -1.5f, 0.0f, 1.5f };
 
     private Vector3 originalColliderSize;
     private Vector3 originalColliderCenter;
+
+    // Variáveis para rastrear colisões
+    public bool isCollidingWithLeft;
+    public bool isCollidingWithRight;
 
     void Start()
     {
@@ -28,16 +32,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Movimento lateral entre as faixas
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && currentLane > 0)
-        {
-            currentLane--;
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow) && currentLane < 2)
-        {
-            currentLane++;
-        }
-
         // Movimento para a nova posição na faixa
         Vector3 newPosition = new Vector3(lanesXPositions[currentLane], transform.position.y, transform.position.z);
         transform.position = Vector3.MoveTowards(transform.position, newPosition, sideSpeed * Time.deltaTime);
@@ -63,7 +57,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Jump()
+    public void Jump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         animator.SetTrigger("jump");
@@ -79,7 +73,7 @@ public class PlayerController : MonoBehaviour
         ResetCollider();
     }
 
-    void Slide()
+    public void Slide()
     {
         animator.SetTrigger("slide");
         isSliding = true;
@@ -123,5 +117,14 @@ public class PlayerController : MonoBehaviour
     {
         Time.timeScale = 0;
         endGamePanel.SetActive(true);
+    }
+
+    // Método para atualizar a pista atual
+    public void UpdateLane()
+    {
+        if (!isCollidingWithLeft && !isCollidingWithRight)
+        {
+            currentLane = 1; // Pista do meio
+        }
     }
 }
