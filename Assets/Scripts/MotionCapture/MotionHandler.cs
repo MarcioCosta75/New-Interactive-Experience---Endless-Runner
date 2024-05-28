@@ -21,8 +21,8 @@ public class MotionHandler : MonoBehaviour
 
         for (int i = 0; i < 32; i++)
         {
-            float x = float.Parse(points[i * 3]) / 100;
-            float y = float.Parse(points[i * 3 + 1]) / 100;
+            float x = float.Parse(points[i * 3]) / 30;
+            float y = float.Parse(points[i * 3 + 1]) / 30;
             //float z = float.Parse(points[i * 3 + 2]) / 100;
 
             float z = 0;
