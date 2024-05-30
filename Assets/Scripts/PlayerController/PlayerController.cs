@@ -24,10 +24,18 @@ public class PlayerController : MonoBehaviour
     public bool isCollidingWithLeft;
     public bool isCollidingWithRight;
 
+    // Variáveis para controlar o som de corrida
+    public AudioSource runningAudioSource;
+
     void Start()
     {
         originalColliderSize = playerCollider.size;
         originalColliderCenter = playerCollider.center;
+
+        if (runningAudioSource == null)
+        {
+            runningAudioSource = GetComponent<AudioSource>();
+        }
     }
 
     void Update()
@@ -55,6 +63,16 @@ public class PlayerController : MonoBehaviour
         {
             isSliding = false;
         }
+
+        // Controla o som de corrida
+        if (IsGrounded() && !isSliding && !runningAudioSource.isPlaying)
+        {
+            runningAudioSource.Play();
+        }
+        else if ((!IsGrounded() || isSliding) && runningAudioSource.isPlaying)
+        {
+            runningAudioSource.Pause();
+        }
     }
 
     public void Jump()
@@ -64,6 +82,7 @@ public class PlayerController : MonoBehaviour
         playerCollider.size = new Vector3(playerCollider.size.x, 0.5f, playerCollider.size.z);
         playerCollider.center = new Vector3(playerCollider.center.x, 1.5f, playerCollider.center.z);
         StartCoroutine(ResetColliderAfterJump());
+        runningAudioSource.Pause(); // Pausa o som de corrida durante o pulo
     }
 
     IEnumerator ResetColliderAfterJump()
@@ -81,6 +100,7 @@ public class PlayerController : MonoBehaviour
         playerCollider.size = new Vector3(originalColliderSize.x, originalColliderSize.y / 4, originalColliderSize.z);
         playerCollider.center = new Vector3(originalColliderCenter.x, originalColliderCenter.y - originalColliderSize.y / 4, originalColliderCenter.z);
         StartCoroutine(ResetColliderAfterSlide());
+        runningAudioSource.Pause(); // Pausa o som de corrida durante o slide
     }
 
     IEnumerator ResetColliderAfterSlide()
@@ -116,7 +136,9 @@ public class PlayerController : MonoBehaviour
     void TriggerGameOver()
     {
         Time.timeScale = 0;
+        gameObject.SetActive(false);
         endGamePanel.SetActive(true);
+        runningAudioSource.Stop(); // Para o som de corrida no game over
     }
 
     // Método para atualizar a pista atual
