@@ -17,10 +17,17 @@ public class ReceiveDataFromTracking : MonoBehaviour
     public bool printToConsole = false;
     public string data;
 
+    public bool hasPort;
+    [SerializeField] private PortControllerCheck PortControllerScript;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+
+        PortControllerScript = GameObject.FindWithTag("DontD").GetComponent<PortControllerCheck>();
+        hasPort = PortControllerScript.hasPort;
+
         receiveThread = new Thread(new ThreadStart(ReceiveData));
         receiveThread.IsBackground = true;
         receiveThread.Start();
@@ -29,7 +36,15 @@ public class ReceiveDataFromTracking : MonoBehaviour
 
     private void ReceiveData()
     {
-        client = new UdpClient(port);
+        if (hasPort == false)
+        {
+            client = new UdpClient(port);
+            PortControllerScript.client = client;
+            hasPort = true;
+        } else {
+            client = PortControllerScript.client;
+        }
+
         while (startReceiving)
         {
             try

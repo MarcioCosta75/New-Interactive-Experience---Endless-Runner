@@ -3537,6 +3537,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MotionTest
       objectReference: {fileID: 0}
+    - target: {fileID: 300350283451991593, guid: c4c9023cb3db55d40973273ed54c03c1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 391415422488498565, guid: c4c9023cb3db55d40973273ed54c03c1, type: 3}
       propertyPath: leftCollider
       value: 
@@ -3551,7 +3555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2958271575365616118, guid: c4c9023cb3db55d40973273ed54c03c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.7
+      value: 5.95
       objectReference: {fileID: 0}
     - target: {fileID: 2958271575365616118, guid: c4c9023cb3db55d40973273ed54c03c1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3585,6 +3589,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3218758063607352383, guid: c4c9023cb3db55d40973273ed54c03c1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6598341055651605440, guid: c4c9023cb3db55d40973273ed54c03c1, type: 3}
       propertyPath: jumpCollider
       value: 
@@ -3601,6 +3609,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1928024601222483031}
+    - target: {fileID: 8492762341644744486, guid: c4c9023cb3db55d40973273ed54c03c1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8583181092906744316, guid: c4c9023cb3db55d40973273ed54c03c1, type: 3}
       propertyPath: rightCollider
       value: 
@@ -5603,7 +5615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3978096434081337585, guid: 23265b6042802744fbfdb61d55efcef9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3978096434081337585, guid: 23265b6042802744fbfdb61d55efcef9, type: 3}
       propertyPath: m_LocalPosition.y
