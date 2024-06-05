@@ -3,6 +3,7 @@ using UnityEngine;
 public class GameEndController : MonoBehaviour
 {
     public GameObject endGamePanel; // Referência para o painel que será ativado
+    public GameObject objectToDeactivate; // Referência para o objeto que será desativado
 
     void Start()
     {
@@ -16,6 +17,9 @@ public class GameEndController : MonoBehaviour
         {
             Time.timeScale = 0; // Congela o jogo parando o tempo
             endGamePanel.SetActive(true); // Ativa o painel de fim de jogo
+
+            if (objectToDeactivate != null && objectToDeactivate.activeSelf)
+                objectToDeactivate.SetActive(false); // Desativa o objeto adicional se estiver ativo
         }
     }
 }
