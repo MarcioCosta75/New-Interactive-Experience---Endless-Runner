@@ -4153,6 +4153,7 @@ GameObject:
   - component: {fileID: 5439884433660779608}
   - component: {fileID: 8057973245844201875}
   - component: {fileID: 2065358025374764878}
+  - component: {fileID: 8057973245844201876}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -4539,6 +4540,7 @@ GameObject:
   - component: {fileID: 7757849659658216449}
   - component: {fileID: 6694543977382475086}
   - component: {fileID: 6690035700157516480}
+  - component: {fileID: 7757849659658216450}
   m_Layer: 0
   m_Name: Left
   m_TagString: Interactive
@@ -5650,6 +5652,7 @@ GameObject:
   - component: {fileID: 5561599329361960104}
   - component: {fileID: 1741390603280200493}
   - component: {fileID: 9015891003260893631}
+  - component: {fileID: 9015891003260893632}
   m_Layer: 0
   m_Name: SlideKnee
   m_TagString: Untagged
@@ -7009,6 +7012,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7757849659658216450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3026731399021563116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3a67591cf04ac48afa98fc28d61ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &7778551380227897091
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7087,6 +7102,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8057973245844201876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2316009131968321919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929294af7241a1e4ebd81252a8708c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpAnimationTrigger: jump
 --- !u!1 &8087394564978032963
 GameObject:
   m_ObjectHideFlags: 0
@@ -7211,8 +7239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 929294af7241a1e4ebd81252a8708c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpCollider: {fileID: 0}
-  playerController: {fileID: 0}
   jumpAnimationTrigger: jump
 --- !u!1 &8439565790605377868
 GameObject:
@@ -7545,8 +7571,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718eb2730caba5f4da7d355aed681640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightCollider: {fileID: 4049708196329711427}
-  playerController: {fileID: 0}
 --- !u!54 &9015891003260893631
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7574,6 +7598,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &9015891003260893632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5348835837088864102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd7030409c23de4191b9165e2b484a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slideCollider: {fileID: 0}
+  playerController: {fileID: 0}
+  slideAnimationTrigger: slide
 --- !u!4 &9158813401898257743
 Transform:
   m_ObjectHideFlags: 0

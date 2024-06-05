@@ -9,12 +9,15 @@ TagManager:
   - HighBarrier
   - GameFinal
   - Switch
-  - JumpTrigger
   - PlayButton
   - LeftButton
   - RightButton
   - Interactive
   - DontD
+  - LeftCollider
+  - RightCollider
+  - JumpCollider
+  - SlideCollider
   layers:
   - Default
   - TransparentFX
